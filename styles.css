@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+
+body{
+        
+        display: flex;
+        justify-content: center;
+        min-height: 100vh;
+        font-family: Nunito;
+background: linear-gradient(315deg, rgb(43, 43, 182) 0%, rgba(0,212,255,1) 100%);
+        /* background-image: linear-gradient(315deg, #eec0c6 0%, #7ee8fa 74%); */
+
+}
+.kitchen-header{
+        display: flex;
+        height: 50px;
+        margin: 30px ;
+        border-radius: 5px;
+        overflow: hidden;
+
+}
+.container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+}
+
+#kitchen-input{
+        font-size: 18px;
+        border: none;
+        outline: none;
+
+        padding: 20px 30px;
+}
+#add-btn{
+        background-color: black;
+        color: white;
+        padding: 10px 30px;
+                font-size: 15px;
+                border: none;
+        outline: none;
+        cursor: pointer;
+
+}
+.kitchen-items-list{
+        list-style-type: none;
+        width: 80%;
+        perspective: 1000px;
+}
+
+.kitchen-items-list li{
+        background-color: aqua;
+        color: black;
+        width: 250px;
+        margin-top: 5px ;
+        padding: 10px 15px;
+        border-radius: 4px;
+        font-weight: bolder;
+            background-image: linear-gradient(315deg, #ffac81 0%, #ff928b 74%);
+
+            overflow: auto;
+}
+ul{
+        perspective: 500px;
+}
+
+
+@keyframes move {
+        from{
+                opacity: 0;
+                transform: rotateX(60deg) translateY(-10px);
+
+        }
+        to{
+                opacity: 1;
+                                transform: rotateX(0deg) translateY(0px);
+
+
+        }
+        
+}
+li{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+}
+
+.fadeOut{
+        transform: rotateX(90deg);
+        transition: 1s;
+        opacity: 0;
+}
+
+i{
+        cursor: pointer;
+        color: firebrick;
+
+}
+.fa-trash{
+        margin-left: auto;
+        margin-right: 10px;
+}
