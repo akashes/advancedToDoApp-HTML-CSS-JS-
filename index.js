@@ -96,6 +96,9 @@ function deleteItem(e) {
 			item = e.target.parentNode;
 			item.classList.add("fadeOut");
 			item.addEventListener("transitionend", () => {
+				let index = kitchenInputArray.indexOf(item.firstChild.textContent);
+                kitchenInputArray.splice(index, 1); // Remove the item from kitchenInputArray
+                setLocalStorage(); // Update local storage
 				item.remove();
 				audio.currentTime = 0.25;
 				audio.play();
